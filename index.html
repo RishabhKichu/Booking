@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <h1 class="title">Book Here</h1>
+</head>
+<body>
+    <script src="/app.js"></script>
+    <h2><form action="email.html" method="GET">
+        <fieldset class="pdetails">
+            <legend class="text1">Personal Details: </legend>
+            <label class="name" for="name">Name: </label><input id="name" class="name" type="text" name="name" id="name" required autofocus placeholder="Your Name" pattern="[a-zA-Z]{3,}" title="Please Enter More Than 3 letters"><br>
+            <label class="email" for="email">Email: </label><input id="email" class="email" type="text" name="email" id="email" notrequired placeholder="Your Email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}com" title="Please Enter In A Vaild Email Adress"><br>
+            <label class="num" for="phone">Phone: </label><input id="num" class="num" type="tel" name="phone" id="phone" required placeholder="Enter Your Phone Number" pattern="[0-9]{8}" min="8" max="8" title="Please enter a valid phone number" ><br>
+            <label class="place" for="Place">Place: </label><select id="place" class="place" name="District" required>
+                <option value="Punalur">Punalur</option>
+                <option value="Trivandrum">Trivandrum</option>
+                <option value="Kochi">Kochi</option>
+            </select>
+            <br>
+        </fieldset>
+        <br>
+        <fieldset class="Bdetails">
+            <legend class="text1">Booking Details: </legend>
+            <label class="hall" for="hall">Which hall would you like?</label><br><select id="hall" class="hall-select" for="hall" required>
+                <option value="Ruby">Ruby</option>
+                <option value="emerald">Emerald</option>
+                <option value="saphhire">Saphhire</option>
+            </select><br>
+            <label class="date" for="date">Date: </label><input id="date" class="date" type="date" name="date" min=today required><br>
+            <label class="time" for="time">Time: </label><input id="time" class="time" type="time" name="time" required><br>
+            <label class="people" for="date">Number of people: </label><input id="people" class="people" type="number" name="numberOfGuests" min=1 max=100000000000000 placeholder="Number of Guests" required><br>
+            <p class="op">Do you require meals?</p>
+            <input id="yes" class="op1" type="radio" name="meals" value="yesMeals"><label for="meals"> Yes</label><br>
+            <input id="no" class="op2" type="radio" name="meals" value="noMeals"><label for="meals"> No</label><br>
+        
+        <button onclick="DisplayDetails()"id="btn" class="submit-btn" type="submit">
+            Submit
+        </button>
+    </fieldset>
+    </form></h2>
+</body>
+</html>
